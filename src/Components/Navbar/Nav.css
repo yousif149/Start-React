@@ -1,0 +1,87 @@
+nav{
+    background-color: #2C3E50;
+    max-width: 100%;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    padding: 20px 0;
+
+}
+nav>.nav-container{
+
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+#check , .btncheck{
+    display: none;
+}
+
+.nav-container>ul {
+    display: flex;
+    list-style: none;
+}
+
+ul li{
+    margin: 0 30px;
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+ul li a{
+
+    text-decoration: none !important;
+    color: #FFF;
+
+  
+}
+
+
+.nav-container>ul a:hover{
+    cursor: pointer;
+    color: #1ABC9C;
+
+}
+
+/* ************ Media Query ************* */
+
+@media(max-width:576px){
+    nav>.nav-container{
+
+     width: 80%;
+    display: flex;
+    justify-content: space-between;
+    }
+    .burger{
+        font-size: 2rem;
+        margin-right: 0 !important;
+    }
+
+    .nav-container ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        line-height: 45px;
+        position: fixed;
+        width:100%;
+        right: 100%;
+        top :70px;
+        height: 30vh;
+        background-color: #2C3E50;
+        z-index: 99999999;
+    }
+
+    #check:checked ~ul{
+        right: 00% !important;
+       
+    }
+
+    .btncheck{
+        display: block;
+    }
+
+}
